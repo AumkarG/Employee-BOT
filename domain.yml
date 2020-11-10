@@ -1,0 +1,113 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- inform
+- thankyou
+- out_of_scope
+- feel_entry
+- name_entry
+entities:
+- a1
+- a2
+- a3
+- a4
+- feeling
+- name
+- affirm
+slots:
+  a1:
+    type: unfeaturized
+    influence_conversation: false
+  a2:
+    type: unfeaturized
+    influence_conversation: false
+  a3:
+    type: unfeaturized
+    influence_conversation: false
+  a4:
+    type: unfeaturized
+    influence_conversation: false
+  feeling:
+    type: unfeaturized
+    influence_conversation: false
+  name:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hi there! I'm helperbot. And what's your name?
+  utter_goodbye:
+  - text: See you tomorrow. Bye!
+  utter_consent:
+  - text: Alright, {name}, let's get to know you. Can I ask you some questions?
+  utter_ask_feeling:
+  - buttons:
+    - payload: '/inform{{"feeling": "Good"}}'
+      title: Good
+    - payload: '/inform{{"feeling": "Neutral"}}'
+      title: Neutral
+    - payload: '/inform{{"feeling": Bad"}}'
+      title: Bad
+    text: How are you feeling?
+  utter_ask_a1:
+  - buttons:
+    - payload: '/inform{{"a1": "Strongly agree"}}'
+      title: Strongly agree
+    - payload: '/inform{{"a1": "Agree"}}'
+      title: Agree
+    - payload: '/inform{{"a1": "Neither agree nor disagree"}}'
+      title: Neither agree nor disagree
+    - payload: '/inform{{"a1": "Disagree"}}'
+      title: Disagree
+    - payload: '/inform{{"a1": "Strongly disagree"}}'
+      title: Strongly disagree
+    text: Do you find your job challenging and exciting?
+  utter_ask_a2:
+  - buttons:
+    - payload: '/inform{{"a2": "Strongly agree"}}'
+      title: Strongly agree
+    - payload: '/inform{{"a2": "Agree"}}'
+      title: Agree
+    - payload: '/inform{{"a2": "Neither agree nor disagree"}}'
+      title: Neither agree nor disagree
+    - payload: '/inform{{"a2": "Disagree"}}'
+      title: Disagree
+    - payload: '/inform{{"a2": "Strongly disagree"}}'
+      title: Strongly disagree
+    text: Are your workplace issues dealt with quickly and efficiently?
+  utter_ask_a3:
+  - buttons:
+    - payload: '/inform{{"a3": "Strongly agree"}}'
+      title: Strongly agree
+    - payload: '/inform{{"a3": "Agree"}}'
+      title: Agree
+    - payload: '/inform{{"a3": "Neither agree nor disagree"}}'
+      title: Neither agree nor disagree
+    - payload: '/inform{{"a3": "Disagree"}}'
+      title: Disagree
+    - payload: '/inform{{"a3": "Strongly disagree"}}'
+      title: Strongly disagree
+    text: "'Do you feel the salary for the job is right for the responsibilities you\
+      \ have?"
+  utter_ask_a4:
+  - buttons:
+    - payload: '/inform{{"a4": "Yes"}}'
+      title: Yes
+    - payload: '/inform{{"a4": "No"}}'
+      title: No
+    text: "'Do you feel the salary for the job is right for the responsibilities you\
+      \ have?"
+  utter_slots_values:
+  - text: "You've submitted the following answers:\n - a1: {a1}\n - a2: {a2}\n - a3:\
+      \ {a3}\n - a4: {a4}"
+  utter_no_worries:
+  - text: No problem :)
+  utter_ask_continue:
+  - text: Sorry, I don't quite understand. Do you want to continue?
+forms:
+  health_form: {}
