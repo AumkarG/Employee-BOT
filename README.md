@@ -13,4 +13,3 @@
 
 ``rasa shell``
 
-![wellness-bot-conversation](https://github.com/karen-white/wellness-check-bot/blob/master/images/bot_conversation.png?raw=true)
