@@ -1,3 +1,18 @@
+# Employee Wellness Feedback BOT 
+
+A chatbot for conversing with employees.
+
+1) Asks basic questions regarding work culture and job satisfaction.
+2) Accepts both MCQ and open ended responses
+3) Stores responses in SQLite database
+
+
+
+Tech stack :
+Python 
+RASA
+Sqlite
+
 
 ## Running the assistant
 
